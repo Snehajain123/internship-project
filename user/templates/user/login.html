@@ -1,0 +1,10 @@
+<form method ='post'>
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type = "submit" value = "Submit">
+</form>
+{% block content %}
+<a href= "{% url 'password_reset' %}"> Forgot Password</a>
+{% endblock %}
+<h3>Dont have an account??</h3><br>
+<a href = "{% url 'register' %}">register Here</a>
